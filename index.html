@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <title>کتابخانه جنوب - خوش آمدید</title>
+    <style>
+        body {
+            font-family: 'Vazir', Tahoma, sans-serif;
+            direction: rtl;
+            background: #f0ebe3;
+            padding: 30px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff8f0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-right: 5px solid #8B5A2B;
+        }
+        h1 {
+            font-size: 28px;
+            color: #4a2c0a;
+            border-bottom: 3px solid #8B5A2B;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #6b4c2a;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            text-align: right;
+            padding: 14px 12px;
+            border-bottom: 1px solid #e8ddd0;
+        }
+        th {
+            background: #d4c5b2;
+            color: #3d2b15;
+            font-size: 16px;
+        }
+        tr:hover {
+            background: #f5ede4;
+        }
+        .folder::before { content: "📁 "; }
+        .book::before { content: "📖 "; }
+        .poem::before { content: "🖋️ "; }
+        a {
+            text-decoration: none;
+            color: #6b3a1f;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #8B4513;
+        }
+        .size {
+            color: #7a6a5a;
+            font-size: 14px;
+        }
+        .date {
+            color: #7a6a5a;
+            font-size: 14px;
+        }
+        .header-icon {
+            font-size: 30px;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-icon">📚</div>
+        <h1>کتابخانه جنوب</h1>
+        <p class="subtitle">گنجینه‌ای از ادبیات کهن پارسی</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>نام</th>
+                    <th>آخرین تغییر</th>
+                    <th>حجم</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="folder"><a href="فردوسی/">فردوسی</a></td><td class="date">۱۴۰۵/۰۴/۱۷</td><td class="size">-</td></tr>
+                <tr><td class="folder"><a href="سعدی/">سعدی</a></td><td class="date">۱۴۰۵/۰۴/۱۷</td><td class="size">-</td></tr>
+                <tr><td class="folder"><a href="حافظ/">حافظ</a></td><td class="date">۱۴۰۵/۰۴/۱۷</td><td class="size">-</td></tr>
+                <tr><td class="folder"><a href="مولوی/">مولوی</a></td><td class="date">۱۴۰۵/۰۴/۱۵</td><td class="size">-</td></tr>
+                <tr><td class="folder"><a href="خیام/">خیام</a></td><td class="date">۱۴۰۵/۰۴/۱۴</td><td class="size">-</td></tr>
+                <tr><td class="folder"><a href="نظامی/">نظامی گنجوی</a></td><td class="date">۱۴۰۵/۰۴/۱۲</td><td class="size">-</td></tr>
+                <tr><td class="folder"><a href="عطار/">عطار نیشابوری</a></td><td class="date">۱۴۰۵/۰۴/۱۰</td><td class="size">-</td></tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #ddd; text-align: center; color: #8a7a6a; font-size: 14px;">
+            <p>📖 تمامی کتاب‌ها به صورت رایگان در دسترس است</p>
+        </div>
+    </div>
+</body>
+</html>
