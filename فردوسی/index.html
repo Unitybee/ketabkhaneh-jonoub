@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فردوسی - کتابخانه جنوب</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background: #f5efe8;
+            direction: rtl;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fffcf7;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-right: 6px solid #8B5A2B;
+        }
+        h1 {
+            font-size: 30px;
+            color: #3d2b15;
+            border-bottom: 3px solid #c9a77b;
+            padding-bottom: 15px;
+        }
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #6b3a1f;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .back:hover { text-decoration: underline; }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        ul li {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e8ddd0;
+            font-size: 18px;
+        }
+        ul li:hover {
+            background: #f5ede4;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #6b3a1f;
+        }
+        ul li a:hover {
+            color: #8B4513;
+            text-decoration: underline;
+        }
+        .book::before { content: "📖 "; }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #8a7a6a;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back">← بازگشت به کتابخانه</a>
+        <h1>📖 فردوسی</h1>
+        <p style="color: #7a5f3e; margin: 10px 0 20px;">حکیم ابوالقاسم فردوسی، سرایندهٔ شاهنامه</p>
+
+        <ul>
+            <li class="book"><a href="شاهنامه.pdf">شاهنامه (نسخه کامل PDF)</a></li>
+            <li class="book"><a href="شاهنامه.html">شاهنامه (خواندن آنلاین)</a></li>
+            <li class="book"><a href="گزیده_شاهنامه.pdf">گزیده شاهنامه (PDF)</a></li>
+        </ul>
+
+        <div class="footer">📖 تمامی کتاب‌ها به صورت رایگان در دسترس است</div>
+    </div>
+</body>
+</html>

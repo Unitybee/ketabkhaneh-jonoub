@@ -2,35 +2,37 @@
 <html lang="fa">
 <head>
     <meta charset="UTF-8" />
-    <title>کتابخانه جنوب - خوش آمدید</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>کتابخانه جنوب</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Vazir', Tahoma, sans-serif;
+            font-family: 'Tahoma', sans-serif;
+            background: #f5efe8;
             direction: rtl;
-            background: #f0ebe3;
-            padding: 30px;
+            padding: 40px 20px;
         }
         .container {
             max-width: 900px;
             margin: auto;
-            background: #fff8f0;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            border-right: 5px solid #8B5A2B;
+            background: #fffcf7;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-right: 6px solid #8B5A2B;
         }
         h1 {
-            font-size: 28px;
-            color: #4a2c0a;
-            border-bottom: 3px solid #8B5A2B;
+            font-size: 32px;
+            color: #3d2b15;
+            border-bottom: 3px solid #c9a77b;
             padding-bottom: 15px;
             text-align: center;
         }
-        .subtitle {
+        .sub {
             text-align: center;
-            color: #6b4c2a;
+            color: #7a5f3e;
+            margin: 15px 0 30px;
             font-size: 18px;
-            margin-bottom: 30px;
         }
         table {
             width: 100%;
@@ -45,67 +47,52 @@
         th {
             background: #d4c5b2;
             color: #3d2b15;
-            font-size: 16px;
         }
         tr:hover {
             background: #f5ede4;
         }
-        .folder::before { content: "📁 "; }
-        .book::before { content: "📖 "; }
-        .poem::before { content: "🖋️ "; }
         a {
             text-decoration: none;
             color: #6b3a1f;
             font-weight: 500;
         }
         a:hover {
-            text-decoration: underline;
             color: #8B4513;
+            text-decoration: underline;
         }
-        .size {
-            color: #7a6a5a;
-            font-size: 14px;
-        }
-        .date {
-            color: #7a6a5a;
-            font-size: 14px;
-        }
-        .header-icon {
-            font-size: 30px;
-            display: block;
+        .folder::before { content: "📁 "; }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
             text-align: center;
-            margin-bottom: 10px;
+            color: #8a7a6a;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header-icon">📚</div>
-        <h1>کتابخانه جنوب</h1>
-        <p class="subtitle">گنجینه‌ای از ادبیات کهن پارسی</p>
+        <h1>📚 کتابخانه جنوب</h1>
+        <p class="sub">گنجینه‌ای از ادبیات کهن پارسی</p>
 
         <table>
             <thead>
                 <tr>
                     <th>نام</th>
-                    <th>آخرین تغییر</th>
-                    <th>حجم</th>
+                    <th>توضیحات</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td class="folder"><a href="فردوسی/">فردوسی</a></td><td class="date">۱۴۰۵/۰۴/۱۷</td><td class="size">-</td></tr>
-                <tr><td class="folder"><a href="سعدی/">سعدی</a></td><td class="date">۱۴۰۵/۰۴/۱۷</td><td class="size">-</td></tr>
-                <tr><td class="folder"><a href="حافظ/">حافظ</a></td><td class="date">۱۴۰۵/۰۴/۱۷</td><td class="size">-</td></tr>
-                <tr><td class="folder"><a href="مولوی/">مولوی</a></td><td class="date">۱۴۰۵/۰۴/۱۵</td><td class="size">-</td></tr>
-                <tr><td class="folder"><a href="خیام/">خیام</a></td><td class="date">۱۴۰۵/۰۴/۱۴</td><td class="size">-</td></tr>
-                <tr><td class="folder"><a href="نظامی/">نظامی گنجوی</a></td><td class="date">۱۴۰۵/۰۴/۱۲</td><td class="size">-</td></tr>
-                <tr><td class="folder"><a href="عطار/">عطار نیشابوری</a></td><td class="date">۱۴۰۵/۰۴/۱۰</td><td class="size">-</td></tr>
+                <tr><td class="folder"><a href="فردوسی/">فردوسی</a></td><td>حکیم ابوالقاسم فردوسی - شاهنامه</td></tr>
+                <tr><td class="folder"><a href="سعدی/">سعدی</a></td><td>شیخ مصلح‌الدین سعدی - گلستان و بوستان</td></tr>
+                <tr><td class="folder"><a href="حافظ/">حافظ</a></td><td>خواجه شمس‌الدین حافظ - دیوان اشعار</td></tr>
+                <tr><td class="folder"><a href="مولوی/">مولوی</a></td><td>جلال‌الدین محمد بلخی - مثنوی معنوی</td></tr>
+                <tr><td class="folder"><a href="خیام/">خیام</a></td><td>عمر خیام نیشابوری - رباعیات</td></tr>
             </tbody>
         </table>
 
-        <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #ddd; text-align: center; color: #8a7a6a; font-size: 14px;">
-            <p>📖 تمامی کتاب‌ها به صورت رایگان در دسترس است</p>
-        </div>
+        <div class="footer">📖 تمامی کتاب‌ها به صورت رایگان در دسترس است</div>
     </div>
 </body>
 </html>
