@@ -60,6 +60,40 @@
         body.dark-mode .desc {
             color: #c9b8a5;
         }
+        body.dark-mode details {
+            background: #2a2a45;
+            border-color: #4a3a2a;
+        }
+        body.dark-mode details summary {
+            color: #f0e0c8;
+            background: #3d2b15;
+        }
+        body.dark-mode details summary:hover {
+            background: #5a3f1f;
+        }
+        body.dark-mode .sub-details {
+            background: #1e1e35;
+            border-color: #4a3a2a;
+        }
+        body.dark-mode .sub-details summary {
+            color: #d4b48c;
+            background: #2a2a45;
+        }
+        body.dark-mode .sub-details summary:hover {
+            background: #3a3a55;
+        }
+        body.dark-mode .sub-details ul li {
+            border-bottom-color: #3a3a55;
+        }
+        body.dark-mode .sub-details ul li:hover {
+            background: #2a2a45;
+        }
+        body.dark-mode .sub-details ul li a {
+            color: #c9b8a5;
+        }
+        body.dark-mode .sub-details ul li a:hover {
+            color: #f0d8b0;
+        }
 
         /* ===== استایل‌های اصلی ===== */
         .container {
@@ -101,39 +135,111 @@
             margin: 10px 0 20px;
             transition: color 0.4s;
         }
-        ul {
+
+        /* ===== استایل details/summary ===== */
+        details {
+            background: #f9f5ef;
+            border: 2px solid #d4c5b2;
+            border-radius: 12px;
+            padding: 5px;
+            margin-top: 15px;
+            transition: background 0.3s, border-color 0.3s;
+        }
+        details summary {
+            padding: 15px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #3d2b15;
+            background: #e8ddd0;
+            border-radius: 10px;
+            transition: background 0.3s, color 0.3s;
             list-style: none;
-            padding: 0;
-            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        ul li {
-            padding: 12px 15px;
-            border-bottom: 1px solid #e8ddd0;
-            font-size: 18px;
-            transition: background 0.3s, border-color 0.4s;
+        details summary::-webkit-details-marker {
+            display: none;
         }
-        ul li:hover {
+        details summary::before {
+            content: "📖 ";
+        }
+        details summary:hover {
+            background: #d4c5b2;
+        }
+        details[open] summary {
+            background: #c9a77b;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+        details[open] summary::before {
+            content: "📖 ";
+        }
+
+        /* ===== زیرمجموعه‌ها (قهرمانان و یاری‌گری) ===== */
+        .sub-details {
+            background: #f5efe8;
+            border: 2px solid #d4c5b2;
+            border-radius: 10px;
+            margin: 10px 15px;
+            padding: 5px;
+            transition: background 0.3s, border-color 0.3s;
+        }
+        .sub-details summary {
+            padding: 12px 18px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #6b3a1f;
+            background: #e8ddd0;
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sub-details summary::-webkit-details-marker {
+            display: none;
+        }
+        .sub-details summary:hover {
+            background: #d4c5b2;
+        }
+        .sub-details[open] summary {
+            background: #b8a080;
+            color: #fff;
+            border-radius: 8px 8px 0 0;
+        }
+        .sub-details ul {
+            list-style: none;
+            padding: 10px 15px;
+            margin: 0;
+        }
+        .sub-details ul li {
+            padding: 10px 15px;
+            border-bottom: 1px solid #ddd;
+            font-size: 16px;
+            transition: background 0.3s, border-color 0.3s;
+        }
+        .sub-details ul li:last-child {
+            border-bottom: none;
+        }
+        .sub-details ul li:hover {
             background: #f5ede4;
+            border-radius: 8px;
         }
-        ul li a {
+        .sub-details ul li a {
             text-decoration: none;
             color: #6b3a1f;
             transition: color 0.3s;
         }
-        ul li a:hover {
+        .sub-details ul li a:hover {
             color: #8B4513;
             text-decoration: underline;
         }
-        .book::before { content: "📖 "; }
-        .footer {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            text-align: center;
-            color: #8a7a6a;
-            font-size: 14px;
-            transition: border-color 0.4s, color 0.4s;
-        }
+        .hero::before { content: "🦸 "; }
+        .help::before { content: "🤝 "; }
 
         /* ===== دکمه تغییر تم ===== */
         .theme-btn {
@@ -154,12 +260,24 @@
             box-shadow: 0 6px 25px rgba(0,0,0,0.25);
         }
 
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #8a7a6a;
+            font-size: 14px;
+            transition: border-color 0.4s, color 0.4s;
+        }
+
         /* ===== ریسپانسیو ===== */
         @media (max-width: 600px) {
             .container { padding: 20px; }
             h1 { font-size: 24px; }
             .header-top { flex-direction: column; align-items: stretch; }
             .theme-btn { width: 100%; text-align: center; }
+            .sub-details { margin: 10px 5px; }
+            details summary { font-size: 17px; }
         }
     </style>
 </head>
@@ -173,9 +291,37 @@
         <h1>📖 فردوسی</h1>
         <p class="desc">حکیم ابوالقاسم فردوسی، سرایندهٔ شاهنامه</p>
 
-        <ul>
-            <li class="book"><a href="شاهنامه.html">شاهنامه </a></li>
-        </ul>
+        <!-- ===== بخش شاهنامه با زیرمجموعه ===== -->
+        <details>
+            <summary>شاهنامه</summary>
+
+            <!-- بخش قهرمانان -->
+            <details class="sub-details">
+                <summary>🦸 بخش قهرمانان</summary>
+                <ul>
+                    <li class="hero"><a href="#">رستم</a></li>
+                    <li class="hero"><a href="#">سهراب</a></li>
+                    <li class="hero"><a href="#">زال</a></li>
+                    <li class="hero"><a href="#">کیخسرو</a></li>
+                    <li class="hero"><a href="#">سیاوش</a></li>
+                    <li class="hero"><a href="#">افراسیاب</a></li>
+                    <li class="hero"><a href="#">کاوه آهنگر</a></li>
+                </ul>
+            </details>
+
+            <!-- بخش یاری‌گری -->
+            <details class="sub-details">
+                <summary>🤝 بخش یاری‌گری (یاری‌خواهی)</summary>
+                <ul>
+                    <li class="help"><a href="#">درخواست یاری از رستم</a></li>
+                    <li class="help"><a href="#">یاری‌خواهی کیخسرو</a></li>
+                    <li class="help"><a href="#">کمک‌خواهی از زال</a></li>
+                    <li class="help"><a href="#">یاری در جنگ ها</a></li>
+                    <li class="help"><a href="#">پیمان‌های یاری‌گری</a></li>
+                </ul>
+            </details>
+
+        </details>
 
         <div class="footer">📖</div>
     </div>
@@ -198,10 +344,10 @@
 
             if (body.classList.contains('dark-mode')) {
                 btn.textContent = '☀️ حالت روز';
-                localStorage.setItem(THEME_KEY, 'dark');  // ذخیره با کلید یکسان
+                localStorage.setItem(THEME_KEY, 'dark');
             } else {
                 btn.textContent = '🌙 حالت شب';
-                localStorage.setItem(THEME_KEY, 'light'); // ذخیره با کلید یکسان
+                localStorage.setItem(THEME_KEY, 'light');
             }
         });
     </script>
