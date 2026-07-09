@@ -51,6 +51,10 @@
             border-top-color: #4a3a2a;
             color: #b0a090;
         }
+        body.dark-mode .theme-btn {
+            background: #d4b48c;
+            color: #1a1a2e;
+        }
         .container {
             max-width: 900px;
             margin: auto;
@@ -134,10 +138,6 @@
             transform: scale(1.04);
             box-shadow: 0 6px 25px rgba(0,0,0,0.25);
         }
-        body.dark-mode .theme-btn {
-            background: #d4b48c;
-            color: #1a1a2e;
-        }
         .header-top {
             display: flex;
             justify-content: space-between;
@@ -186,8 +186,11 @@
         const body = document.body;
         const btn = document.getElementById('themeToggle');
 
+        // ===== کلید یکسان برای همه صفحات =====
+        const THEME_KEY = 'globalTheme';
+
         // بررسی حالت ذخیره‌شده در مرورگر
-        if (localStorage.getItem('libraryTheme') === 'dark') {
+        if (localStorage.getItem(THEME_KEY) === 'dark') {
             body.classList.add('dark-mode');
             btn.textContent = '☀️ حالت روز';
         }
@@ -197,10 +200,10 @@
 
             if (body.classList.contains('dark-mode')) {
                 btn.textContent = '☀️ حالت روز';
-                localStorage.setItem('libraryTheme', 'dark');
+                localStorage.setItem(THEME_KEY, 'dark');
             } else {
                 btn.textContent = '🌙 حالت شب';
-                localStorage.setItem('libraryTheme', 'light');
+                localStorage.setItem(THEME_KEY, 'light');
             }
         });
     </script>
