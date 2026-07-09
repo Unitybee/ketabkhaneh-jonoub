@@ -184,8 +184,11 @@
         const body = document.body;
         const btn = document.getElementById('themeToggle');
 
+        // ===== کلید یکسان برای همه صفحات =====
+        const THEME_KEY = 'globalTheme';
+
         // بررسی حالت ذخیره‌شده در مرورگر
-        if (localStorage.getItem('ferdowsiTheme') === 'dark') {
+        if (localStorage.getItem(THEME_KEY) === 'dark') {
             body.classList.add('dark-mode');
             btn.textContent = '☀️ حالت روز';
         }
@@ -195,10 +198,10 @@
 
             if (body.classList.contains('dark-mode')) {
                 btn.textContent = '☀️ حالت روز';
-                localStorage.setItem('ferdowsiTheme', 'dark');
+                localStorage.setItem(THEME_KEY, 'dark');  // ذخیره با کلید یکسان
             } else {
                 btn.textContent = '🌙 حالت شب';
-                localStorage.setItem('ferdowsiTheme', 'light');
+                localStorage.setItem(THEME_KEY, 'light'); // ذخیره با کلید یکسان
             }
         });
     </script>
