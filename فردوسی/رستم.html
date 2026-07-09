@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>رستم - کتابخانه جنوب</title>
-    
-    <!-- ===== فونت آنلاین از Google Fonts (نیاز به دانلود دستی نداره) ===== -->
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet" />
-    
+    <title>رستم - شاهنامه فردوسی</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Vazirmatn', 'Tahoma', sans-serif;
             background: #f5efe8;
             direction: rtl;
             padding: 40px 20px;
-            color: #3d2b15;
-            transition: background 0.4s, color 0.4s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        
         /* ===== حالت شب ===== */
         body.dark-mode {
             background: #1a1a2e;
@@ -33,60 +36,42 @@
             color: #f0e0c8;
             border-bottom-color: #8B5A2B;
         }
+        body.dark-mode p {
+            color: #c9b8a5;
+        }
         body.dark-mode .back {
             color: #d4b48c;
         }
         body.dark-mode .back:hover {
             color: #f0d8b0;
         }
-        body.dark-mode .content-box {
-            background: #2a2a45;
-            border-color: #4a3a2a;
+        body.dark-mode .footer {
+            border-top-color: #4a3a2a;
+            color: #b0a090;
         }
-        body.dark-mode .content-box h2 {
-            color: #f0e0c8;
-            border-bottom-color: #8B5A2B;
+        body.dark-mode .download-btn {
+            background: #d4b48c;
+            color: #1a1a2e;
         }
-        body.dark-mode .content-box p {
-            color: #c9b8a5;
-        }
-        body.dark-mode .info-label {
-            color: #d4b48c;
-        }
-        body.dark-mode .info-value {
-            color: #f0d8b0;
+        body.dark-mode .download-btn:hover {
+            background: #f0d8b0;
         }
         body.dark-mode .theme-btn {
             background: #d4b48c;
             color: #1a1a2e;
         }
-        body.dark-mode .footer {
-            border-top-color: #4a3a2a;
-            color: #b0a090;
-        }
-        body.dark-mode .feature-item {
-            background: #1e1e35;
-            border-color: #4a3a2a;
-        }
-        body.dark-mode .feature-item:hover {
-            background: #2e2e45;
-        }
-        body.dark-mode .feature-item h3 {
-            color: #f0e0c8;
-        }
-        body.dark-mode .feature-item p {
-            color: #b0a090;
-        }
 
-        /* ===== استایل‌های اصلی ===== */
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: auto;
             background: #fffcf7;
-            padding: 40px;
+            padding: 50px 40px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border-right: 6px solid #8B5A2B;
+            text-align: justify;
+            line-height: 2.2;
+            font-size: 20px;
             transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
         }
         .header-top {
@@ -95,123 +80,8 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 15px;
-            margin-bottom: 10px;
-        }
-        .back {
-            display: inline-block;
-            color: #6b3a1f;
-            font-weight: bold;
-            font-size: 16px;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .back:hover { text-decoration: underline; }
-        
-        h1 {
-            font-size: 32px;
-            color: #3d2b15;
-            border-bottom: 3px solid #c9a77b;
-            padding-bottom: 15px;
             margin-bottom: 20px;
-            transition: color 0.4s, border-color 0.4s;
         }
-        
-        /* ===== باکس محتوایی ===== */
-        .content-box {
-            background: #f9f5ef;
-            border: 2px solid #e8ddd0;
-            border-radius: 16px;
-            padding: 30px;
-            margin: 20px 0;
-            transition: background 0.4s, border-color 0.4s;
-        }
-        .content-box h2 {
-            font-size: 26px;
-            color: #3d2b15;
-            border-bottom: 2px solid #c9a77b;
-            padding-bottom: 12px;
-            margin-bottom: 20px;
-            transition: color 0.4s, border-color 0.4s;
-        }
-        .content-box p {
-            font-size: 18px;
-            line-height: 2;
-            color: #4a3a2a;
-            margin-bottom: 15px;
-            transition: color 0.4s;
-        }
-        
-        /* ===== اطلاعات قهرمان ===== */
-        .hero-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        .info-item {
-            background: #fffcf7;
-            padding: 15px 20px;
-            border-radius: 12px;
-            border-right: 4px solid #8B5A2B;
-            transition: background 0.4s, border-color 0.4s;
-        }
-        body.dark-mode .info-item {
-            background: #2a2a45;
-            border-right-color: #c9a77b;
-        }
-        .info-label {
-            font-size: 14px;
-            color: #8a7a6a;
-            font-weight: 300;
-            transition: color 0.4s;
-        }
-        .info-value {
-            font-size: 20px;
-            font-weight: 700;
-            color: #3d2b15;
-            margin-top: 5px;
-            transition: color 0.4s;
-        }
-        
-        /* ===== ویژگی‌ها ===== */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .feature-item {
-            background: #fffcf7;
-            border: 2px solid #e8ddd0;
-            border-radius: 12px;
-            padding: 20px;
-            transition: all 0.3s;
-            cursor: default;
-        }
-        .feature-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-        .feature-item h3 {
-            font-size: 20px;
-            color: #3d2b15;
-            margin-bottom: 10px;
-            transition: color 0.4s;
-        }
-        .feature-item p {
-            font-size: 15px;
-            line-height: 1.8;
-            color: #6a5a4a;
-            margin: 0;
-            transition: color 0.4s;
-        }
-        .feature-icon {
-            font-size: 32px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        /* ===== دکمه تغییر تم ===== */
         .theme-btn {
             padding: 10px 24px;
             font-size: 15px;
@@ -229,7 +99,33 @@
             transform: scale(1.05);
             box-shadow: 0 6px 25px rgba(0,0,0,0.25);
         }
-
+        h1 {
+            font-size: 32px;
+            color: #3d2b15;
+            border-bottom: 3px solid #c9a77b;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+            transition: color 0.4s, border-color 0.4s;
+        }
+        p {
+            margin-bottom: 20px;
+            color: #2d1f0e;
+            transition: color 0.4s;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #6b3a1f;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .back:hover {
+            text-decoration: underline;
+        }
         .footer {
             margin-top: 30px;
             padding-top: 20px;
@@ -239,113 +135,90 @@
             font-size: 14px;
             transition: border-color 0.4s, color 0.4s;
         }
+        .download-btn {
+            display: inline-block;
+            background: #8B5A2B;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        .download-btn:hover {
+            background: #6b3a1f;
+            transform: scale(1.05);
+        }
+        .hero-icon {
+            font-size: 48px;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+        }
 
         /* ===== ریسپانسیو ===== */
         @media (max-width: 600px) {
-            .container { padding: 20px; }
+            .container { padding: 25px 20px; font-size: 17px; }
             h1 { font-size: 24px; }
             .header-top { flex-direction: column; align-items: stretch; }
             .theme-btn { width: 100%; text-align: center; }
-            .content-box { padding: 20px; }
-            .content-box p { font-size: 16px; }
-            .hero-info { grid-template-columns: 1fr; }
-            .features-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header-top">
-            <a href="../" class="back">← بازگشت به کتابخانه</a>
+            <a href="./" class="back">← بازگشت به فردوسی</a>
             <button class="theme-btn" id="themeToggle">🌙 حالت شب</button>
         </div>
 
-        <h1>🦸 رستم</h1>
+        <span class="hero-icon">🦸</span>
+        <h1>رستم پهلوان</h1>
 
-        <!-- ===== باکس اطلاعات قهرمان ===== -->
-        <div class="content-box">
-            <h2>⚔️ معرفی رستم</h2>
-            <p>
-                <strong>رستم</strong> بزرگ‌ترین و نامی‌ترین پهلوان اساطیری ایران در شاهنامهٔ فردوسی است. 
-                او فرزند <strong>زال</strong> و <strong>رودابه</strong> است و در سیستان می‌زید. 
-                رستم نماد <strong>قدرت، شجاعت، وفاداری</strong> و <strong>پهلوانی</strong> است.
-            </p>
-            <p>
-                از مشهورترین داستان‌های او می‌توان به <strong>نبرد با سهراب</strong>، 
-                <strong>رستم و سهراب</strong>، <strong>هفت‌خوان رستم</strong> و 
-                <strong>نبرد با اژدها</strong> اشاره کرد.
-            </p>
+        <p>
+            <strong>رستم</strong> بزرگ‌ترین و نیرومندترین پهلوان شاهنامهٔ فردوسی است. 
+            او فرزند <strong>زال</strong> و <strong>رودابه</strong> است و در 
+            <strong>سیستان</strong> می‌زید. رستم نماد شجاعت، قدرت، وفاداری و 
+            پهلوانی در فرهنگ ایرانی است.
+        </p>
+
+        <p>
+            نام رستم با دلاوری‌ها و نبردهای بی‌نظیرش در تاریخ اساطیر ایران گره خورده است. 
+            از جمله مشهورترین داستان‌های او می‌توان به <strong>نبرد با سهراب</strong>، 
+            <strong>هفت‌خوان رستم</strong> و <strong>نبرد با اژدها</strong> اشاره کرد.
+        </p>
+
+        <p>
+            رستم همواره در راه دفاع از ایران و کیان ایران‌زمین در برابر دشمنان 
+            از جمله <strong>افراسیاب تورانی</strong> ایستادگی کرد و هرگز از میدان نبرد 
+            روی گردان نشد. اسب وفادار او <strong>رخش</strong> نیز در کنارش بود و 
+            در بسیاری از نبردها او را یاری می‌کرد.
+        </p>
+
+        <p>
+            از ویژگی‌های بارز رستم می‌توان به قدرت بی‌نظیر، شجاعت خارق‌العاده، 
+            وفاداری به ایران و فرزانگی او اشاره کرد. او نه تنها یک پهلوان، بلکه 
+            یک اسطورهٔ تمام‌عیار در تاریخ و فرهنگ این مرز و بوم است.
+        </p>
+
+        <!-- دکمه دانلود خودکار -->
+        <div style="text-align: center;">
+            <a href="#" class="download-btn" id="downloadBtn">📥 دانلود خودکار این صفحه</a>
         </div>
 
-        <!-- ===== اطلاعات تکمیلی ===== -->
-        <div class="content-box">
-            <h2>📋 اطلاعات</h2>
-            <div class="hero-info">
-                <div class="info-item">
-                    <div class="info-label">نام پدر</div>
-                    <div class="info-value">زال</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-label">نام مادر</div>
-                    <div class="info-value">رودابه</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-label">زادگاه</div>
-                    <div class="info-value">سیستان</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-label">اسب</div>
-                    <div class="info-value">رخش</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-label">جنگ‌افزار</div>
-                    <div class="info-value">گرز، تیر و کمان</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-label">لقب</div>
-                    <div class="info-value">پهلوان جهان</div>
-                </div>
-            </div>
-        </div>
+        <br />
+        <a href="../فردوسی/" class="back">← بازگشت به کتابخانه فردوسی</a>
 
-        <!-- ===== ویژگی‌ها ===== -->
-        <div class="content-box">
-            <h2>🌟 ویژگی‌های رستم</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <span class="feature-icon">💪</span>
-                    <h3>قدرت بی‌نظیر</h3>
-                    <p>رستم دارای قدرتی فوق‌العاده بود و هیچ دشمنی توانایی مقابله با او را نداشت.</p>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">🛡️</span>
-                    <h3>شجاعت</h3>
-                    <p>در تمام نبردها با شجاعت کامل می‌جنگید و هرگز از میدان نبرد فرار نمی‌کرد.</p>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">🤝</span>
-                    <h3>وفاداری</h3>
-                    <p>همواره به ایران و شاهان آن وفادار بود و از کیان ایران دفاع می‌کرد.</p>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">🧠</span>
-                    <h3>فرزانگی</h3>
-                    <p>علاوه بر قدرت جسمانی، از هوش و فرزانگی بالایی نیز برخوردار بود.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">📖</div>
+        <div class="footer">📖 کتابخانه جنوب - تمامی حقوق محفوظ است</div>
     </div>
 
     <script>
+        // ===== حالت شب/روز هماهنگ =====
         const body = document.body;
         const btn = document.getElementById('themeToggle');
-
-        // ===== کلید یکسان برای همه صفحات =====
         const THEME_KEY = 'globalTheme';
 
-        // بررسی حالت ذخیره‌شده در مرورگر
         if (localStorage.getItem(THEME_KEY) === 'dark') {
             body.classList.add('dark-mode');
             btn.textContent = '☀️ حالت روز';
@@ -353,7 +226,6 @@
 
         btn.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
-
             if (body.classList.contains('dark-mode')) {
                 btn.textContent = '☀️ حالت روز';
                 localStorage.setItem(THEME_KEY, 'dark');
@@ -361,6 +233,26 @@
                 btn.textContent = '🌙 حالت شب';
                 localStorage.setItem(THEME_KEY, 'light');
             }
+        });
+
+        // ===== دانلود خودکار فایل =====
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // محتوای کامل صفحه رو می‌گیره
+            const content = document.documentElement.outerHTML;
+
+            // فایل HTML می‌سازه با همون محتوا
+            const blob = new Blob([content], { type: 'text/html; charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'رستم_پهلوان.html'; // اسم فایل دانلودی
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         });
     </script>
 </body>
