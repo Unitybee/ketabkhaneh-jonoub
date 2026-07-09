@@ -7,7 +7,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Vazirmatn', 'Tahoma', sans-serif;
             background: #f5efe8;
@@ -19,6 +23,7 @@
             min-height: 100vh;
             transition: background 0.4s;
         }
+        /* ===== حالت شب ===== */
         body.dark-mode {
             background: #1a1a2e;
             color: #e0e0e0;
@@ -45,13 +50,6 @@
             border-top-color: #4a3a2a;
             color: #b0a090;
         }
-        body.dark-mode .download-btn {
-            background: #d4b48c;
-            color: #1a1a2e;
-        }
-        body.dark-mode .download-btn:hover {
-            background: #f0d8b0;
-        }
         body.dark-mode .theme-btn {
             background: #d4b48c;
             color: #1a1a2e;
@@ -76,7 +74,7 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         .theme-btn {
             padding: 10px 24px;
@@ -119,7 +117,9 @@
             text-decoration: none;
             transition: color 0.3s;
         }
-        .back:hover { text-decoration: underline; }
+        .back:hover {
+            text-decoration: underline;
+        }
         .footer {
             margin-top: 30px;
             padding-top: 20px;
@@ -129,27 +129,13 @@
             font-size: 14px;
             transition: border-color 0.4s, color 0.4s;
         }
-        .download-btn {
-            display: inline-block;
-            background: #8B5A2B;
-            color: #fff;
-            padding: 10px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: all 0.3s;
-        }
-        .download-btn:hover {
-            background: #6b3a1f;
-            transform: scale(1.05);
-        }
         .hero-icon {
             font-size: 48px;
             display: block;
             text-align: center;
             margin-bottom: 10px;
         }
+
         @media (max-width: 600px) {
             .container { padding: 25px 20px; font-size: 17px; }
             h1 { font-size: 24px; }
@@ -168,17 +154,31 @@
         <span class="hero-icon">🦸</span>
         <h1>رستم پهلوان</h1>
 
-        <p><strong>رستم</strong> بزرگ‌ترین و نیرومندترین پهلوان شاهنامهٔ فردوسی است. او فرزند <strong>زال</strong> و <strong>رودابه</strong> است و در <strong>سیستان</strong> می‌زید. رستم نماد شجاعت، قدرت، وفاداری و پهلوانی در فرهنگ ایرانی است.</p>
+        <p>
+            <strong>رستم</strong> بزرگ‌ترین و نیرومندترین پهلوان شاهنامهٔ فردوسی است. 
+            او فرزند <strong>زال</strong> و <strong>رودابه</strong> است و در 
+            <strong>سیستان</strong> می‌زید. رستم نماد شجاعت، قدرت، وفاداری و 
+            پهلوانی در فرهنگ ایرانی است.
+        </p>
 
-        <p>نام رستم با دلاوری‌ها و نبردهای بی‌نظیرش در تاریخ اساطیر ایران گره خورده است. از جمله مشهورترین داستان‌های او می‌توان به <strong>نبرد با سهراب</strong>، <strong>هفت‌خوان رستم</strong> و <strong>نبرد با اژدها</strong> اشاره کرد.</p>
+        <p>
+            نام رستم با دلاوری‌ها و نبردهای بی‌نظیرش در تاریخ اساطیر ایران گره خورده است. 
+            از جمله مشهورترین داستان‌های او می‌توان به <strong>نبرد با سهراب</strong>، 
+            <strong>هفت‌خوان رستم</strong> و <strong>نبرد با اژدها</strong> اشاره کرد.
+        </p>
 
-        <p>رستم همواره در راه دفاع از ایران و کیان ایران‌زمین در برابر دشمنان از جمله <strong>افراسیاب تورانی</strong> ایستادگی کرد و هرگز از میدان نبرد روی گردان نشد. اسب وفادار او <strong>رخش</strong> نیز در کنارش بود و در بسیاری از نبردها او را یاری می‌کرد.</p>
+        <p>
+            رستم همواره در راه دفاع از ایران و کیان ایران‌زمین در برابر دشمنان 
+            از جمله <strong>افراسیاب تورانی</strong> ایستادگی کرد و هرگز از میدان نبرد 
+            روی گردان نشد. اسب وفادار او <strong>رخش</strong> نیز در کنارش بود و 
+            در بسیاری از نبردها او را یاری می‌کرد.
+        </p>
 
-        <p>از ویژگی‌های بارز رستم می‌توان به قدرت بی‌نظیر، شجاعت خارق‌العاده، وفاداری به ایران و فرزانگی او اشاره کرد. او نه تنها یک پهلوان، بلکه یک اسطورهٔ تمام‌عیار در تاریخ و فرهنگ این مرز و بوم است.</p>
-
-        <div style="text-align: center;">
-            <a href="#" class="download-btn" id="downloadBtn">📥 دانلود خودکار این صفحه</a>
-        </div>
+        <p>
+            از ویژگی‌های بارز رستم می‌توان به قدرت بی‌نظیر، شجاعت خارق‌العاده، 
+            وفاداری به ایران و فرزانگی او اشاره کرد. او نه تنها یک پهلوان، بلکه 
+            یک اسطورهٔ تمام‌عیار در تاریخ و فرهنگ این مرز و بوم است.
+        </p>
 
         <br />
         <a href="../فردوسی/" class="back">← بازگشت به کتابخانه فردوسی</a>
@@ -205,20 +205,6 @@
                 btn.textContent = '🌙 حالت شب';
                 localStorage.setItem(THEME_KEY, 'light');
             }
-        });
-
-        document.getElementById('downloadBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            const content = document.documentElement.outerHTML;
-            const blob = new Blob([content], { type: 'text/html; charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'رستم_پهلوان.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
         });
     </script>
 </body>
