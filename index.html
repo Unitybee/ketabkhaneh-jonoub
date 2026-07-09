@@ -8,9 +8,48 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Tahoma', sans-serif;
-            background: #f5efe8;
             direction: rtl;
             padding: 40px 20px;
+            background: #f5efe8;
+            color: #3d2b15;
+            transition: background 0.4s, color 0.4s;
+        }
+        /* حالت شب */
+        body.dark-mode {
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+        body.dark-mode .container {
+            background: #252540;
+            border-right-color: #c9a77b;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        body.dark-mode h1 {
+            color: #f0e0c8;
+            border-bottom-color: #8B5A2B;
+        }
+        body.dark-mode .sub {
+            color: #c9b8a5;
+        }
+        body.dark-mode th {
+            background: #3d2b15;
+            color: #f0e0c8;
+        }
+        body.dark-mode td {
+            border-bottom-color: #4a3a2a;
+        }
+        body.dark-mode tr:hover {
+            background: #3a2a1a;
+        }
+        body.dark-mode a {
+            color: #d4b48c;
+        }
+        body.dark-mode a:hover {
+            color: #f0d8b0;
+        }
+        body.dark-mode .footer {
+            border-top-color: #4a3a2a;
+            color: #b0a090;
         }
         .container {
             max-width: 900px;
@@ -20,6 +59,7 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border-right: 6px solid #8B5A2B;
+            transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
         }
         h1 {
             font-size: 32px;
@@ -27,12 +67,14 @@
             border-bottom: 3px solid #c9a77b;
             padding-bottom: 15px;
             text-align: center;
+            transition: color 0.4s, border-color 0.4s;
         }
         .sub {
             text-align: center;
             color: #7a5f3e;
             margin: 15px 0 30px;
             font-size: 18px;
+            transition: color 0.4s;
         }
         table {
             width: 100%;
@@ -43,6 +85,7 @@
             text-align: right;
             padding: 14px 12px;
             border-bottom: 1px solid #e8ddd0;
+            transition: background 0.3s, border-color 0.4s, color 0.4s;
         }
         th {
             background: #d4c5b2;
@@ -55,6 +98,7 @@
             text-decoration: none;
             color: #6b3a1f;
             font-weight: 500;
+            transition: color 0.3s;
         }
         a:hover {
             color: #8B4513;
@@ -68,12 +112,55 @@
             text-align: center;
             color: #8a7a6a;
             font-size: 14px;
+            transition: border-color 0.4s, color 0.4s;
+        }
+
+        /* دکمه تغییر تم */
+        .theme-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            background: #8B5A2B;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+        }
+        .theme-btn:hover {
+            transform: scale(1.04);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+        }
+        body.dark-mode .theme-btn {
+            background: #d4b48c;
+            color: #1a1a2e;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        /* ریسپانسیو */
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 24px; }
+            .header-top { flex-direction: column; align-items: stretch; }
+            .theme-btn { width: 100%; text-align: center; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📚 کتابخانه جنوب</h1>
+        <div class="header-top">
+            <h1>📚 کتابخانه جنوب</h1>
+            <button class="theme-btn" id="themeToggle">🌙 حالت شب</button>
+        </div>
         <p class="sub">گنجینه‌ای از ادبیات کهن پارسی</p>
 
         <table>
@@ -94,5 +181,28 @@
 
         <div class="footer">📖</div>
     </div>
+
+    <script>
+        const body = document.body;
+        const btn = document.getElementById('themeToggle');
+
+        // بررسی حالت ذخیره‌شده در مرورگر
+        if (localStorage.getItem('libraryTheme') === 'dark') {
+            body.classList.add('dark-mode');
+            btn.textContent = '☀️ حالت روز';
+        }
+
+        btn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                btn.textContent = '☀️ حالت روز';
+                localStorage.setItem('libraryTheme', 'dark');
+            } else {
+                btn.textContent = '🌙 حالت شب';
+                localStorage.setItem('libraryTheme', 'light');
+            }
+        });
+    </script>
 </body>
 </html>
