@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آغاز - کتابخانه جنوب</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background: #f5efe8;
+            direction: rtl;
+            padding: 40px 20px;
+            color: #3d2b15;
+            transition: background 0.4s, color 0.4s;
+        }
+        body.dark-mode {
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+        body.dark-mode .container {
+            background: #252540;
+            border-right-color: #c9a77b;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        body.dark-mode h1 {
+            color: #f0e0c8;
+            border-bottom-color: #8B5A2B;
+        }
+        body.dark-mode .back {
+            color: #d4b48c;
+        }
+        body.dark-mode .back:hover {
+            color: #f0d8b0;
+        }
+        body.dark-mode ul li {
+            border-bottom-color: #4a3a2a;
+        }
+        body.dark-mode ul li:hover {
+            background: #3a2a1a;
+        }
+        body.dark-mode ul li a {
+            color: #d4b48c;
+        }
+        body.dark-mode ul li a:hover {
+            color: #f0d8b0;
+        }
+        body.dark-mode .footer {
+            border-top-color: #4a3a2a;
+            color: #b0a090;
+        }
+        body.dark-mode .theme-btn {
+            background: #d4b48c;
+            color: #1a1a2e;
+        }
+        body.dark-mode .desc {
+            color: #c9b8a5;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fffcf7;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-right: 6px solid #8B5A2B;
+            transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 30px;
+            color: #3d2b15;
+            border-bottom: 3px solid #c9a77b;
+            padding-bottom: 15px;
+            transition: color 0.4s, border-color 0.4s;
+        }
+        .back {
+            display: inline-block;
+            color: #6b3a1f;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .back:hover { text-decoration: underline; }
+        .desc {
+            color: #7a5f3e;
+            margin: 10px 0 20px;
+            transition: color 0.4s;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        ul li {
+            padding: 14px 15px;
+            border-bottom: 1px solid #e8ddd0;
+            font-size: 18px;
+            transition: background 0.3s, border-color 0.4s;
+        }
+        ul li:hover {
+            background: #f5ede4;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #6b3a1f;
+            display: block;
+            transition: color 0.3s;
+        }
+        ul li a:hover {
+            color: #8B4513;
+            text-decoration: underline;
+        }
+        .book::before { content: "📖 "; }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #8a7a6a;
+            font-size: 14px;
+            transition: border-color 0.4s, color 0.4s;
+        }
+        .theme-btn {
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            background: #8B5A2B;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .theme-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 24px; }
+            .header-top { flex-direction: column; align-items: stretch; }
+            .theme-btn { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-top">
+            <a href="../" class="back">← بازگشت به کتابخانه</a>
+            <button class="theme-btn" id="themeToggle">🌙 حالت شب</button>
+        </div>
+
+        <h1>📖 آغاز سخن</h1>
+        <!-- <p class="desc">جلال‌الدین محمد بلخی - مولانا</p> -->
+
+        <ul>
+            <li class="hero"><a href=">skhn.html">آغاز سخن</a></li>
+            <li class="hero"><a href="دیوان.html">دیوان شمس تبریزی</a></li>
+            <!-- <li class="herf"><a href="مولوی_آنلاین.html">خواندن آنلاین</a></li> -->
+        </ul>
+
+        <div class="footer">📖 تمامی کتاب‌ها به صورت رایگان در دسترس است</div>
+    </div>
+
+    <script>
+        const body = document.body;
+        const btn = document.getElementById('themeToggle');
+        const THEME_KEY = 'globalTheme';
+
+        if (localStorage.getItem(THEME_KEY) === 'dark') {
+            body.classList.add('dark-mode');
+            btn.textContent = '☀️ حالت روز';
+        }
+
+        btn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                btn.textContent = '☀️ حالت روز';
+                localStorage.setItem(THEME_KEY, 'dark');
+            } else {
+                btn.textContent = '🌙 حالت شب';
+                localStorage.setItem(THEME_KEY, 'light');
+            }
+        });
+    </script>
+</body>
+</html>
