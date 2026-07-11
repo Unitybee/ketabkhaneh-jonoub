@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>متن شاهنامه فردوسی</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+            background: #f5efe8;
+            direction: rtl;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background 0.4s;
+        }
+        /* ===== حالت شب ===== */
+        body.dark-mode {
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+        body.dark-mode .container {
+            background: #252540;
+            border-right-color: #c9a77b;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        body.dark-mode h1 {
+            color: #f0e0c8;
+            border-bottom-color: #8B5A2B;
+        }
+        body.dark-mode p {
+            color: #c9b8a5;
+        }
+        body.dark-mode .back {
+            color: #d4b48c;
+        }
+        body.dark-mode .back:hover {
+            color: #f0d8b0;
+        }
+        body.dark-mode .footer {
+            border-top-color: #4a3a2a;
+            color: #b0a090;
+        }
+        body.dark-mode .theme-btn {
+            background: #d4b48c;
+            color: #1a1a2e;
+        }
+        body.dark-mode .back-link {
+            color: #d4b48c;
+        }
+        body.dark-mode .back-link:hover {
+            color: #f0d8b0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fffcf7;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-right: 6px solid #8B5A2B;
+            text-align: justify;
+            line-height: 2.2;
+            font-size: 20px;
+            transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .theme-btn {
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            background: #8B5A2B;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .theme-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+        }
+        h1 {
+            font-size: 32px;
+            color: #3d2b15;
+            border-bottom: 3px solid #c9a77b;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+            transition: color 0.4s, border-color 0.4s;
+        }
+        p {
+            margin-bottom: 20px;
+            color: #2d1f0e;
+            transition: color 0.4s;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #6b3a1f;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .back:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #8a7a6a;
+            font-size: 14px;
+            transition: border-color 0.4s, color 0.4s;
+        }
+        .back-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .back-link {
+            color: #6b3a1f;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: #f5efe8;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+            background: #e8ddd0;
+        }
+        body.dark-mode .back-link {
+            background: #3a2a1a;
+        }
+        body.dark-mode .back-link:hover {
+            background: #4a3a2a;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 25px 20px; font-size: 17px; }
+            h1 { font-size: 24px; }
+            .header-top { flex-direction: column; align-items: stretch; }
+            .theme-btn { width: 100%; text-align: center; }
+            .back-links { flex-direction: column; align-items: center; }
+            .back-link { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-top">
+            <div></div>
+            <button class="theme-btn" id="themeToggle">🌙 حالت شب</button>
+        </div>
+
+        <h1>📜 گفتار اندر ستایش خرد </h1>
+
+        <p>
+            
+
+            گرانمایه جمشید فرزند او<br />
+            کمر بست یک‌دل پر از پند او<br />
+            <br />
+            برآمد بر آن تخت فرّخ پدر<br />
+            به رسم کیان بر سرش تاج زر<br />
+            <br />
+            کمر بست با فرّ شاهنشهی<br />
+            جهان گشت سرتاسر او را رهی<br />
+            <br />
+            زمانه بر آسود از داوری<br />
+            به فرمان او دیو و مرغ و پری<br />
+            <br />
+            جهان را فزوده بدو آبروی<br />
+            فروزان شده تخت شاهی بدوی<br />
+            <br />
+            منم گفت با فرّهٔ ایزدی<br />
+            همم شهریاری همم موبدی<br />
+            <br />
+            بدان را ز بد دست کوته کنم<br />
+            روان را سوی روشنی ره کنم<br />
+            <br />
+            نخست آلت جنگ را دست برد<br />
+            در نام جستن به گردان سپرد<br />
+            <br />
+            به فرّ کیی نرم کرد آهنا<br />
+            چو خود و زره کرد و چون جوشنا<br />
+            <br />
+            چو خفتان و تیغ و چو برگستوان<br />
+            همه کرد پیدا به روشن روان<br />
+            <br />
+            بدین اندرون سال پنجاه رنج<br />
+            ببرد و از این چند بنهاد گنج<br />
+            <br />
+            دگر پنجه اندیشهٔ جامه کرد<br />
+            که پوشند هنگام ننگ و نبرد<br />
+            <br />
+            ز کتّان و ابریشم و موی قز<br />
+            قصب کرد پر مایه دیبا و خز<br />
+            <br />
+            بیاموختشان رشتن و تافتن<br />
+            به تار اندرون پود را بافتن<br />
+            <br />
+            چو شد بافته شستن و دوختن<br />
+            گرفتند از او یک‌سر آموختن<br />
+            <br />
+            چو این کرده شد ساز دیگر نهاد<br />
+            زمانه بدو شاد و او نیز شاد<br />
+            <br />
+            ز هر انجمن پیشه‌ور گرد کرد<br />
+            بدین اندرون نیز پنجاه خورد<br />
+            <br />
+            گروهی که کاتوزیان خوانی‌اش<br />
+            به رسم پرستندگان دانی‌اش<br />
+            <br />
+            جدا کردشان از میان گروه<br />
+            پرستنده را جایگه کرد کوه<br />
+            <br />
+            بدان تا پرستش بود کارشان<br />
+            نوان پیش روشن جهاندارشان<br />
+            <br />
+            صفی بر دگر دست بنشاندند<br />
+            همی نام نیساریان خواندند<br />
+            <br />
+            کجا شیر مردان جنگ آورند<br />
+            فروزندهٔ لشکر و کشورند<br />
+            <br />
+            کز ایشان بود تخت شاهی به جای<br />
+            و ز ایشان بود نام مردی به پای<br />
+            <br />
+            بسودی سه دیگر گره را شناس<br />
+            کجا نیست از کس بر ایشان سپاس<br />
+            <br />
+            بکارند و ورزند و خود بدروند<br />
+            به گاه خورش سرزنش نشنوند<br />
+            <br />
+            ز فرمان تن‌آزاده و ژنده‌پوش<br />
+            ز آواز پیغاره آسوده گوش<br />
+            <br />
+            تن آزاد و آباد گیتی بر اوی<br />
+            بر آسوده از داور و گفتگوی<br />
+            <br />
+            چه گفت آن سخن‌گوی آزاده مرد<br />
+            که آزاده را کاهلی بنده کرد<br />
+            <br />
+            چهارم که خوانند اهتوخوشی<br />
+            همان دست‌ورزان ابا سرکشی<br />
+            <br />
+            کجا کارشان همگنان پیشه بود<br />
+            روانشان همیشه پر اندیشه بود<br />
+            <br />
+            بدین اندرون سال پنجاه نیز<br />
+            بخورد و بورزید و بخشید چیز<br />
+            <br />
+            از این هر یکی را یکی پایگاه<br />
+            سزاوار بگزید و بنمود راه<br />
+            <br />
+            که تا هر کس اندازهٔ خویش را<br />
+            ببیند بداند کم و بیش را<br />
+            <br />
+            بفرمود پس دیو ناپاک را<br />
+            به آب اندر آمیختن خاک را<br />
+            <br />
+            هر آنچ از گل آمد چو بشناختند<br />
+            سبک خشت را کالبد ساختند<br />
+            <br />
+            به سنگ و به گچ دیو دیوار کرد<br />
+            نخست از بَرَش هندسی کار کرد<br />
+            <br />
+            چو گرمابه و کاخ‌های بلند<br />
+            چو ایوان که باشد پناه از گزند<br />
+            <br />
+            ز خارا گهر جست یک روزگار<br />
+            همی کرد از او روشنی خواستار<br />
+            <br />
+            به چنگ آمدش چند گونه گهر<br />
+            چو یاقوت و بیجاده و سیم و زر<br />
+            <br />
+            ز خارا به افسون برون آورید<br />
+            شد آراسته بندها را کلید<br />
+            <br />
+            دگر بوی‌های خوش آورد باز<br />
+            که دارند مردم به بویش نیاز<br />
+            <br />
+            چو بان و چو کافور و چون مشک ناب<br />
+            چو عود و چو عنبر چو روشن گلاب<br />
+            <br />
+            پزشکی و درمان هر دردمند<br />
+            در تندرستی و راه گزند<br />
+            <br />
+            همان رازها کرد نیز آشکار<br />
+            جهان را نیامد چنو خواستار<br />
+            <br />
+            گذر کرد از آن پس به کشتی بر آب<br />
+            ز کشور به کشور گرفتی شتاب<br />
+            <br />
+            چنین سال پنجه برنجید نیز<br />
+            ندید از هنر بر خرد بسته چیز<br />
+            <br />
+            همه کردنی‌ها چو آمد به جای<br />
+            ز جای مهی برتر آورد پای<br />
+            <br />
+            به فرّ کیانی یکی تخت ساخت<br />
+            چه مایه بدو گوهر اندر نشاخت<br />
+            <br />
+            که چون خواستی دیو برداشتی<br />
+            ز هامون به گردون برافراشتی<br />
+            <br />
+            چو خورشید تابان میان هوا<br />
+            نشسته بر او شاه فرمانروا<br />
+            <br />
+            جهان انجمن شد بر آن تخت او<br />
+            شگفتی فرومانده از بخت او<br />
+            <br />
+            به جمشید بر گوهر افشاندند<br />
+            مر آن روز را روز نو خواندند<br />
+            <br />
+            سر سال نو هرمز فرودین<br />
+            بر آسوده از رنج روی زمین<br />
+            <br />
+            بزرگان به شادی بیاراستند<br />
+            می و جام و رامشگران خواستند<br />
+            <br />
+            چنین جشن فرخ از آن روزگار<br />
+            به ما ماند از آن خسروان یادگار<br />
+            <br />
+            چنین سال سیصد همی رفت کار<br />
+            ندیدند مرگ اندر آن روزگار<br />
+            <br />
+            ز رنج و ز بدشان نبد آگهی<br />
+            میان بسته دیوان به سان رهی<br />
+            <br />
+            به فرمان مردم نهاده دو گوش<br />
+            ز رامش جهان پر ز آوای نوش<br />
+            <br />
+            چنین تا بر آمد بر این روزگار<br />
+            ندیدند جز خوبی از کردگار<br />
+            <br />
+            جهان سربه‌سر گشت او را رهی<br />
+            نشسته جهاندار با فرّهی<br />
+            <br />
+            یکایک به تخت مهی بنگرید<br />
+            به گیتی جز از خویشتن را ندید<br />
+            <br />
+            منی کرد آن شاه یزدان شناس<br />
+            ز یزدان بپیچید و شد ناسپاس<br />
+            <br />
+            گرانمایگان را ز لشگر بخواند<br />
+            چه مایه سخن پیش ایشان براند<br />
+            <br />
+            چنین گفت با سالخورده مهان<br />
+            که جز خویشتن را ندانم جهان<br />
+            <br />
+            هنر در جهان از من آمد پدید<br />
+            چو من نامور تخت شاهی ندید<br />
+            <br />
+            جهان را به خوبی من آراستم<br />
+            چنان است گیتی کجا خواستم<br />
+            <br />
+            خور و خواب و آرامتان از من است<br />
+            همان کوشش و کامتان از من است<br />
+            <br />
+            بزرگی و دیهیم شاهی مراست<br />
+            که گوید که جز من کسی پادشاست<br />
+            <br />
+            همه موبدان سرفگنده نگون<br />
+            چرا کس نیارست گفتن نه چون<br />
+            <br />
+            چو این گفته شد فرّ یزدان از اوی<br />
+            بگشت و جهان شد پر از گفت‌وگوی<br />
+            <br />
+            منی چون بپیوست با کردگار<br />
+            شکست اندر آورد و برگشت کار<br />
+            <br />
+            چه گفت آن سخن‌گوی با فرّ و هوش<br />
+            چو خسرو شوی بندگی را بکوش<br />
+            <br />
+            به یزدان هر آن کس که شد ناسپاس<br />
+            به دلش اندر آید ز هر سو هراس<br />
+            <br />
+            به جمشید بر تیره‌گون گشت روز<br />
+            همی کاست آن فرّ گیتی‌فروز<br />
+
+
+        </p>
+
+        <!-- <p>
+            سخن گفتن اندر ستایش خرد<br />
+            که هر نیکوی را ز خرد بایدت
+        </p>
+
+        <p>
+            کنون ای خردمند و دانش‌پژوه<br />
+            بیندیش و این داستان را نگه
+        </p>
+
+        <p>
+            ... (ادامه متن شاهنامه اینجا قرار می‌گیرد) ...
+        </p> -->
+
+        <!-- ===== دو دکمه بازگشت ===== -->
+        <div class="back-links">
+            <a href="../" class="back-link">← بازگشت به صفحه اصلی کتابخانه</a>
+            <a href="./" class="back-link">← بازگشت به صفحه قبل</a>
+        </div>
+
+        <div class="footer">📖 کتابخانه جنوب - تمامی حقوق محفوظ است</div>
+    </div>
+
+    <script>
+        const body = document.body;
+        const btn = document.getElementById('themeToggle');
+        const THEME_KEY = 'globalTheme';
+
+        if (localStorage.getItem(THEME_KEY) === 'dark') {
+            body.classList.add('dark-mode');
+            btn.textContent = '☀️ حالت روز';
+        }
+
+        btn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                btn.textContent = '☀️ حالت روز';
+                localStorage.setItem(THEME_KEY, 'dark');
+            } else {
+                btn.textContent = '🌙 حالت شب';
+                localStorage.setItem(THEME_KEY, 'light');
+            }
+        });
+    </script>
+</body>
+</html>

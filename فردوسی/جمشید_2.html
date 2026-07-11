@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>متن شاهنامه فردوسی</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+            background: #f5efe8;
+            direction: rtl;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background 0.4s;
+        }
+        /* ===== حالت شب ===== */
+        body.dark-mode {
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+        body.dark-mode .container {
+            background: #252540;
+            border-right-color: #c9a77b;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        body.dark-mode h1 {
+            color: #f0e0c8;
+            border-bottom-color: #8B5A2B;
+        }
+        body.dark-mode p {
+            color: #c9b8a5;
+        }
+        body.dark-mode .back {
+            color: #d4b48c;
+        }
+        body.dark-mode .back:hover {
+            color: #f0d8b0;
+        }
+        body.dark-mode .footer {
+            border-top-color: #4a3a2a;
+            color: #b0a090;
+        }
+        body.dark-mode .theme-btn {
+            background: #d4b48c;
+            color: #1a1a2e;
+        }
+        body.dark-mode .back-link {
+            color: #d4b48c;
+        }
+        body.dark-mode .back-link:hover {
+            color: #f0d8b0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fffcf7;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-right: 6px solid #8B5A2B;
+            text-align: justify;
+            line-height: 2.2;
+            font-size: 20px;
+            transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .theme-btn {
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            background: #8B5A2B;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .theme-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+        }
+        h1 {
+            font-size: 32px;
+            color: #3d2b15;
+            border-bottom: 3px solid #c9a77b;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+            transition: color 0.4s, border-color 0.4s;
+        }
+        p {
+            margin-bottom: 20px;
+            color: #2d1f0e;
+            transition: color 0.4s;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #6b3a1f;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .back:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #8a7a6a;
+            font-size: 14px;
+            transition: border-color 0.4s, color 0.4s;
+        }
+        .back-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .back-link {
+            color: #6b3a1f;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: #f5efe8;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+            background: #e8ddd0;
+        }
+        body.dark-mode .back-link {
+            background: #3a2a1a;
+        }
+        body.dark-mode .back-link:hover {
+            background: #4a3a2a;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 25px 20px; font-size: 17px; }
+            h1 { font-size: 24px; }
+            .header-top { flex-direction: column; align-items: stretch; }
+            .theme-btn { width: 100%; text-align: center; }
+            .back-links { flex-direction: column; align-items: center; }
+            .back-link { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-top">
+            <div></div>
+            <button class="theme-btn" id="themeToggle">🌙 حالت شب</button>
+        </div>
+
+        <h1>📜 گفتار اندر ستایش خرد </h1>
+
+        <p>
+            
+
+            یکی مرد بود اندر آن روزگار<br />
+            ز دشت سواران نیزه گذار<br />
+            <br />
+            گرانمایه هم شاه و هم نیک مرد<br />
+            ز ترس جهاندار با باد سرد<br />
+            <br />
+            که مرداس نام گرانمایه بود<br />
+            به داد و دهش برترین پایه بود<br />
+            <br />
+            مر او را ز دوشیدنی چارپای<br />
+            ز هر یک هزار آمدندی به جای<br />
+            <br />
+            همان گاو دوشا به فرمانبری<br />
+            همان تازی اسب گزیده مری<br />
+            <br />
+            بز و میش بد شیرور همچنین<br />
+            به دوشیزگان داده بد پاکدین<br />
+            <br />
+            به شیر آن کسی را که بودی نیاز<br />
+            بدان خواسته دست بردی فراز<br />
+            <br />
+            پسر بد مر این پاکدل را یکی<br />
+            کش از مهر بهره نبود اندکی<br />
+            <br />
+            جهانجوی را نام ضحّاک بود<br />
+            دلیر و سبکسار و ناپاک بود<br />
+            <br />
+            کجا بیور اسپش همی خواندند<br />
+            چنین نام بر پهلوی راندند<br />
+            <br />
+            کجا بیور از پهلوانی شمار<br />
+            بود بر زبان دری ده هزار<br />
+            <br />
+            ز اسپان تازی به زرین ستام<br />
+            ورا بود بیور که بردند نام<br />
+            <br />
+            شب و روز بودی دو بهره به زین<br />
+            ز روی بزرگی نه از روی کین<br />
+            <br />
+            چنان بد که ابلیس روزی پگاه<br />
+            بیامد به سان یکی نیک‌خواه<br />
+            <br />
+            دل مهتر از راه نیکی ببرد<br />
+            جوان گوش گفتار او را سپرد<br />
+            <br />
+            بدو گفت پیمانت خواهم نخست<br />
+            پس آنگه سخن برگشایم درست<br />
+            <br />
+            جوان نیک‌دل گشت فرمانش کرد<br />
+            چنان چون بفرمود سوگند خورد<br />
+            <br />
+            که راز تو با کس نگویم ز بن<br />
+            ز تو بشنوم هر چه گویی سخن<br />
+            <br />
+            بدو گفت جز تو کسی کدخدای<br />
+            چه باید همی با تو اندر سرای<br />
+            <br />
+            چه باید پدر کش پسر چون تو بود<br />
+            یکی پندت از من بباید شنود<br />
+            <br />
+            زمانه برین خواجهٔ سالخورد<br />
+            همی دیر ماند تو اندر نورد<br />
+            <br />
+            بگیر این سر مایه‌ور جاه او<br />
+            تو را زیبد اندر جهان گاه او<br />
+            <br />
+            بر این گفتهٔ من چو داری وفا<br />
+            جهاندار باشی یکی پادشا<br />
+            <br />
+            چو ضحاک بشنید اندیشه کرد<br />
+            ز خون پدر شد دلش پر ز درد<br />
+            <br />
+            به ابلیس گفت این سزاوار نیست<br />
+            دگر گوی کاین از در کار نیست<br />
+            <br />
+            بدو گفت گر بگذری زین سخن<br />
+            بتابی ز سوگند و پیمان من<br />
+            <br />
+            بماند به گردنت سوگند و بند<br />
+            شوی خوار و ماند پدرت ارجمند<br />
+            <br />
+            سر مرد تازی به دام آورید<br />
+            چنان شد که فرمان او برگزید<br />
+            <br />
+            بپرسید کاین چاره با من بگوی<br />
+            نتابم ز رای تو من هیچ روی<br />
+            <br />
+            بدو گفت من چاره سازم ترا<br />
+            به خورشید سر برفرازم ترا<br />
+            <br />
+            مر آن پادشا را در اندر سرای<br />
+            یکی بوستان بود بس دلگشای<br />
+            <br />
+            گرانمایه شبگیر برخاستی<br />
+            ز بهر پرستش بیاراستی<br />
+            <br />
+            سر و تن بشستی نهفته به باغ<br />
+            پرستنده با او ببردی چراغ<br />
+            <br />
+            بیاورد وارونه ابلیس بند<br />
+            یکی ژرف چاهی به ره بر بکند<br />
+            <br />
+            پس ابلیس وارونه آن ژرف چاه<br />
+            به خاشاک پوشید و بسترد راه<br />
+            <br />
+            سر تازیان مهتر نامجوی<br />
+            شب آمد سوی باغ بنهاد روی<br />
+            <br />
+            به چاه اندر افتاد و بشکست پست<br />
+            شد آن نیک‌دل مرد یزدان‌پرست<br />
+            <br />
+            به هر نیک و بد شاه آزاد مرد<br />
+            به فرزند بر نازده باد سرد<br />
+            <br />
+            همی پروریدش به ناز و به رنج<br />
+            بدو بود شاد و بدو داد گنج<br />
+            <br />
+            چنان بدگهر شوخ فرزند او<br />
+            بگشت از ره داد و پیوند او<br />
+            <br />
+            به خون پدر گشت همداستان<br />
+            ز دانا شنیدم من این داستان<br />
+            <br />
+            که فرزند بد گر شود نرّه شیر<br />
+            به خون پدر هم نباشد دلیر<br />
+            <br />
+            مگر در نهانش سخن دیگرست<br />
+            پژوهنده را راز با مادرست<br />
+            <br />
+            فرومایه ضحاک بیدادگر<br />
+            بدین چاره بگرفت جای پدر<br />
+            <br />
+            به سر بر نهاد افسر تازیان<br />
+            بر ایشان ببخشید سود و زیان<br />
+
+
+        </p>
+
+        <!-- <p>
+            سخن گفتن اندر ستایش خرد<br />
+            که هر نیکوی را ز خرد بایدت
+        </p>
+
+        <p>
+            کنون ای خردمند و دانش‌پژوه<br />
+            بیندیش و این داستان را نگه
+        </p>
+
+        <p>
+            ... (ادامه متن شاهنامه اینجا قرار می‌گیرد) ...
+        </p> -->
+
+        <!-- ===== دو دکمه بازگشت ===== -->
+        <div class="back-links">
+            <a href="../" class="back-link">← بازگشت به صفحه اصلی کتابخانه</a>
+            <a href="./" class="back-link">← بازگشت به صفحه قبل</a>
+        </div>
+
+        <div class="footer">📖 کتابخانه جنوب - تمامی حقوق محفوظ است</div>
+    </div>
+
+    <script>
+        const body = document.body;
+        const btn = document.getElementById('themeToggle');
+        const THEME_KEY = 'globalTheme';
+
+        if (localStorage.getItem(THEME_KEY) === 'dark') {
+            body.classList.add('dark-mode');
+            btn.textContent = '☀️ حالت روز';
+        }
+
+        btn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                btn.textContent = '☀️ حالت روز';
+                localStorage.setItem(THEME_KEY, 'dark');
+            } else {
+                btn.textContent = '🌙 حالت شب';
+                localStorage.setItem(THEME_KEY, 'light');
+            }
+        });
+    </script>
+</body>
+</html>
