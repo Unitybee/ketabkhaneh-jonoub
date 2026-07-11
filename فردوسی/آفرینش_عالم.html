@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>متن شاهنامه فردوسی</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+            background: #f5efe8;
+            direction: rtl;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background 0.4s;
+        }
+        /* ===== حالت شب ===== */
+        body.dark-mode {
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+        body.dark-mode .container {
+            background: #252540;
+            border-right-color: #c9a77b;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        body.dark-mode h1 {
+            color: #f0e0c8;
+            border-bottom-color: #8B5A2B;
+        }
+        body.dark-mode p {
+            color: #c9b8a5;
+        }
+        body.dark-mode .back {
+            color: #d4b48c;
+        }
+        body.dark-mode .back:hover {
+            color: #f0d8b0;
+        }
+        body.dark-mode .footer {
+            border-top-color: #4a3a2a;
+            color: #b0a090;
+        }
+        body.dark-mode .theme-btn {
+            background: #d4b48c;
+            color: #1a1a2e;
+        }
+        body.dark-mode .back-link {
+            color: #d4b48c;
+        }
+        body.dark-mode .back-link:hover {
+            color: #f0d8b0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fffcf7;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-right: 6px solid #8B5A2B;
+            text-align: justify;
+            line-height: 2.2;
+            font-size: 20px;
+            transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .theme-btn {
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            background: #8B5A2B;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .theme-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+        }
+        h1 {
+            font-size: 32px;
+            color: #3d2b15;
+            border-bottom: 3px solid #c9a77b;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+            transition: color 0.4s, border-color 0.4s;
+        }
+        p {
+            margin-bottom: 20px;
+            color: #2d1f0e;
+            transition: color 0.4s;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #6b3a1f;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .back:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #8a7a6a;
+            font-size: 14px;
+            transition: border-color 0.4s, color 0.4s;
+        }
+        .back-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .back-link {
+            color: #6b3a1f;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: #f5efe8;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+            background: #e8ddd0;
+        }
+        body.dark-mode .back-link {
+            background: #3a2a1a;
+        }
+        body.dark-mode .back-link:hover {
+            background: #4a3a2a;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 25px 20px; font-size: 17px; }
+            h1 { font-size: 24px; }
+            .header-top { flex-direction: column; align-items: stretch; }
+            .theme-btn { width: 100%; text-align: center; }
+            .back-links { flex-direction: column; align-items: center; }
+            .back-link { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-top">
+            <div></div>
+            <button class="theme-btn" id="themeToggle">🌙 حالت شب</button>
+        </div>
+
+        <h1>📜 گفتار اندر ستایش خرد </h1>
+
+        <p>
+            از آغاز باید که دانی دُرُست<br />
+            سَرِ مایهٔ گوهَران از نُخُست<br />
+            <br />
+            که یَزدان زِ ناچیز چیز آفرید<br />
+            بِدان تا توانایی آرَد پَدید<br />
+            <br />
+            سَرِ مایهٔ گوهران این چهار<br />
+            بَرآوَرده بی‌رَنج و بی‌روزگار<br />
+            <br />
+            یکی آتشی بَر شُده تابناک<br />
+            میانْ آب و باد از بَرِ تیره خاک<br />
+            <br />
+            نخستین که آتش به جُنبش دَمید<br />
+            زِ گرمیش پَس خُشکی آمد پَدید<br />
+            <br />
+            و زان پَس زِ آرام سَردی نُمود<br />
+            زِ سَردی هَمان باز تَری فُزود<br />
+            <br />
+            چو این چار گوهَر به جای آمدند<br />
+            زِ بَهرِ سِپَنجی سَرای آمدند<br />
+            <br />
+            گُهرها یِک اَندر دِگَر ساخته<br />
+            زِ هَر گونه گَردن بَراَفراخته<br />
+            <br />
+            پَدید آمد این گُنبدِ تیز رو<br />
+            شگفتی نمایندهٔ نو به‌ نو<br />
+            <br />
+            اَبَر دَه و دو هَفت شُد کَدخُدای<br />
+            گرفتند هَر یِک سزاوار جای<br />
+            <br />
+            دَرِ بَخشش و دادن آمد پَدید<br />
+            ببخشید دانا چُنان چون سَزید<br />
+            <br />
+            فلک‌ها یِک اَندر دِگَر بَسته شُد<br />
+            بِجُنبید چون کار پیوسته شُد<br />
+            <br />
+            چو دریا و چون کوه و چون دَشت و راغ<br />
+            زَمین شُد به کِردارِ روشَن چراغ<br />
+            <br />
+            بِبالید کوه آب‌ها بَر دَمید<br />
+            سَرِ رُستَنی سوی بالا کشید<br />
+            <br />
+            زمین را بُلندی نَبُد جایگاه<br />
+            یکی مَرکزی تیره بود و سیاه<br />
+            <br />
+            ستاره بَر او بَرشِگِفتی نُمود<br />
+            به خاک اَندرون روشنایی فُزود<br />
+            <br />
+            هَمی بَر شُد آتش فُرود آمد آب<br />
+            هَمی گَشت گِردِ زمین آفتاب<br />
+            <br />
+            گیا رُست با چَند گونه درخت<br />
+            به زیر اَندر آمد سَران‌شان زِ بَخت<br />
+            <br />
+            بِبالَد نَدارد جُز این نیرویی<br />
+            نپویَد چو پویَندگان هَر سویی<br />
+            <br />
+            و زان پَس چو جُنبَنده آمد پَدید<br />
+            همه رُستَنی زیرِ خویش آورید<br />
+            <br />
+            خور و خواب و آرام جوید هَمی<br />
+            و زان زندگی کام جوید هَمی<br />
+            <br />
+            نه گویا زَبان وُ نه جویا خِرَد<br />
+            زِ خاک و زِ خاشاک تَن پَروَرَد<br />
+            <br />
+            نَداند بَد و نیکِ فرجامِ کار<br />
+            نخواهد از او بَندگی کِردگار<br />
+            <br />
+            چو دانا تَوانا بُد و دادگَر<br />
+            از ایرا نکرد ایچ پنهان هنر<br />
+            <br />
+            چُنین است فَرجامِ کارِ جَهان<br />
+            نَداند کسی آشکار و نهان<br />
+        </p>
+
+        <!-- <p>
+            سخن گفتن اندر ستایش خرد<br />
+            که هر نیکوی را ز خرد بایدت
+        </p>
+
+        <p>
+            کنون ای خردمند و دانش‌پژوه<br />
+            بیندیش و این داستان را نگه
+        </p>
+
+        <p>
+            ... (ادامه متن شاهنامه اینجا قرار می‌گیرد) ...
+        </p> -->
+
+        <!-- ===== دو دکمه بازگشت ===== -->
+        <div class="back-links">
+            <a href="../" class="back-link">← بازگشت به صفحه اصلی کتابخانه</a>
+            <a href="./" class="back-link">← بازگشت به صفحه قبل</a>
+        </div>
+
+        <div class="footer">📖 کتابخانه جنوب - تمامی حقوق محفوظ است</div>
+    </div>
+
+    <script>
+        const body = document.body;
+        const btn = document.getElementById('themeToggle');
+        const THEME_KEY = 'globalTheme';
+
+        if (localStorage.getItem(THEME_KEY) === 'dark') {
+            body.classList.add('dark-mode');
+            btn.textContent = '☀️ حالت روز';
+        }
+
+        btn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                btn.textContent = '☀️ حالت روز';
+                localStorage.setItem(THEME_KEY, 'dark');
+            } else {
+                btn.textContent = '🌙 حالت شب';
+                localStorage.setItem(THEME_KEY, 'light');
+            }
+        });
+    </script>
+</body>
+</html>
