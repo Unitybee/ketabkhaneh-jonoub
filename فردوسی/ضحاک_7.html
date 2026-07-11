@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>متن شاهنامه فردوسی</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+            background: #f5efe8;
+            direction: rtl;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background 0.4s;
+        }
+        /* ===== حالت شب ===== */
+        body.dark-mode {
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+        body.dark-mode .container {
+            background: #252540;
+            border-right-color: #c9a77b;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        body.dark-mode h1 {
+            color: #f0e0c8;
+            border-bottom-color: #8B5A2B;
+        }
+        body.dark-mode p {
+            color: #c9b8a5;
+        }
+        body.dark-mode .back {
+            color: #d4b48c;
+        }
+        body.dark-mode .back:hover {
+            color: #f0d8b0;
+        }
+        body.dark-mode .footer {
+            border-top-color: #4a3a2a;
+            color: #b0a090;
+        }
+        body.dark-mode .theme-btn {
+            background: #d4b48c;
+            color: #1a1a2e;
+        }
+        body.dark-mode .back-link {
+            color: #d4b48c;
+        }
+        body.dark-mode .back-link:hover {
+            color: #f0d8b0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fffcf7;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-right: 6px solid #8B5A2B;
+            text-align: justify;
+            line-height: 2.2;
+            font-size: 20px;
+            transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .theme-btn {
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            background: #8B5A2B;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .theme-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+        }
+        h1 {
+            font-size: 32px;
+            color: #3d2b15;
+            border-bottom: 3px solid #c9a77b;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+            transition: color 0.4s, border-color 0.4s;
+        }
+        p {
+            margin-bottom: 20px;
+            color: #2d1f0e;
+            transition: color 0.4s;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #6b3a1f;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .back:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #8a7a6a;
+            font-size: 14px;
+            transition: border-color 0.4s, color 0.4s;
+        }
+        .back-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .back-link {
+            color: #6b3a1f;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: #f5efe8;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+            background: #e8ddd0;
+        }
+        body.dark-mode .back-link {
+            background: #3a2a1a;
+        }
+        body.dark-mode .back-link:hover {
+            background: #4a3a2a;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 25px 20px; font-size: 17px; }
+            h1 { font-size: 24px; }
+            .header-top { flex-direction: column; align-items: stretch; }
+            .theme-btn { width: 100%; text-align: center; }
+            .back-links { flex-direction: column; align-items: center; }
+            .back-link { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-top">
+            <div></div>
+            <button class="theme-btn" id="themeToggle">🌙 حالت شب</button>
+        </div>
+
+        <h1>📜 گفتار اندر ستایش خرد </h1>
+
+        <p>
+            
+
+            چنان بُد که ضحاک را روز و شب<br />
+            به نام فریدون گشادی دو لب<br />
+            <br />
+            بر آن برز بالا ز بیم نشیب<br />
+            شده ز آفریدون دلش پر نهیب<br />
+            <br />
+            چنان بُد که یک روز بر تخت عاج<br />
+            نهاده به سر بر ز پیروزه تاج<br />
+            <br />
+            ز هر کشوری مهتران را بخواست<br />
+            که در پادشاهی کند پشت راست<br />
+            <br />
+            از آن پس چنین گفت با موبدان<br />
+            که ای پرهنر باگهر بخردان!<br />
+            <br />
+            مرا در نهانی یکی دشمن‌ست<br />
+            که بر بخردان این سخن روشن است<br />
+            <br />
+            به سال اندکی و به دانش بزرگ<br />
+            گوی بدنژادی دلیر و سترگ<br />
+            <br />
+            اگر چه به سال اندک ای راستان<br />
+            درین کار موبد زدش داستان<br />
+            <br />
+            که دشمن اگر چه بود خوار و خُرد<br />
+            نبایدت او را به پی بر سپرد<br />
+            <br />
+            ندارم همی دشمن خُرد خوار<br />
+            بترسم همی از بد روزگار<br />
+            <br />
+            همی زین فزون بایدم لشکری<br />
+            هم از مردم و هم ز دیو و پری<br />
+            <br />
+            یکی لشگری خواهم انگیختن<br />
+            ابا دیو مردم برآمیختن<br />
+            <br />
+            بباید بدین بود هم‌داستان<br />
+            که من ناشکیبم بدین داستان<br />
+            <br />
+            یکی محضر اکنون بباید نوشت<br />
+            که جز تخم نیکی سپهبد نکشت<br />
+            <br />
+            نگوید سخن جز همه راستی<br />
+            نخواهد به داد اندرون کاستی<br />
+            <br />
+            ز بیم سپهبد همه راستان<br />
+            بر آن کار گشتند هم‌داستان<br />
+            <br />
+            بر آن محضر اژدها ناگزیر<br />
+            گواهی نوشتند برنا و پیر<br />
+            <br />
+            هم آنگه یکایک از درگاه شاه<br />
+            برآمد خروشیدن دادخواه<br />
+            <br />
+            ستم دیده را پیش او خواندند<br />
+            بر نامدارانش بنشاندند<br />
+            <br />
+            بِدو گفت مهتر به روی دژم<br />
+            که بر گوی تا از که دیدی ستم؟<br />
+            <br />
+            خروشید و زد دست بر سر ز شاه<br />
+            که شاها منم کاوهٔ دادخواه<br />
+            <br />
+            یکی بی‌زیان مرد آهنگرم<br />
+            ز شاه آتش آید همی بر سرم<br />
+            <br />
+            تو شاهی و گر اژدها پیکری<br />
+            بباید بدین داستان داوری<br />
+            <br />
+            که گر هفت کشور به شاهی تو راست<br />
+            چرا رنج و سختی همه بهر ماست؟<br />
+            <br />
+            شماریت با من بباید گرفت<br />
+            بدان تا جهان ماند اندر شگفت<br />
+            <br />
+            مگر کز شمار تو آید پدید<br />
+            که نوبت ز گیتی به من چون رسید<br />
+            <br />
+            که مارانت را مغز فرزند من<br />
+            همی داد باید ز هر انجمن<br />
+            <br />
+            سپهبد به گفتار او بنگرید<br />
+            شگفت آمدش کآن سخن‌ها شنید<br />
+            <br />
+            بِدو باز دادند فرزند او<br />
+            به خوبی بجستند پیوند او<br />
+            <br />
+            بفرمود پس کاوه را پادشا<br />
+            که باشد بران محضر اندر گوا<br />
+            <br />
+            چو بر خواند کاوه همه محضرش<br />
+            سبک سوی پیران آن کشورش<br />
+            <br />
+            خروشید کای پای مردان دیو<br />
+            بریده دل از ترس گیهان خدیو<br />
+            <br />
+            همه سوی دوزخ نهادید روی<br />
+            سپردید دل‌ها به گفتار اوی<br />
+            <br />
+            نباشم بدین محضر اندر گوا<br />
+            نه هرگز براندیشم از پادشا<br />
+            <br />
+            خروشید و برجست لرزان ز جای<br />
+            بدرّید و بسپرد محضر به پای<br />
+            <br />
+            گرانمایه فرزند او پیش اوی<br />
+            ز ایوان برون شد خروشان به کوی<br />
+            <br />
+            مهان شاه را خواندند آفرین<br />
+            که ای نامور شهریار زمین!<br />
+            <br />
+            ز چرخ فلک بر سرت باد سرد<br />
+            نیارد گذشتن به روز نبرد<br />
+            <br />
+            چرا پیش تو کاوهٔ خام‌گوی<br />
+            به سان همالان کند سرخ روی<br />
+            <br />
+            همه محضر ما و پیمان تو<br />
+            بدرّد بپیچد ز فرمان تو<br />
+            <br />
+            کیِ نامور پاسخ آورد زود<br />
+            که از من شگفتی بباید شنود<br />
+            <br />
+            که چون کاوه آمد ز درگه پدید<br />
+            دو گوش من آواز او را شنید<br />
+            <br />
+            میان من و او ز ایوان درست<br />
+            تو گفتی یکی کوه آهن برست<br />
+            <br />
+            ندانم چه شاید بدن زین سپس<br />
+            که راز سپهری ندانست کس<br />
+            <br />
+            چو کاوه برون شد ز درگاه شاه<br />
+            بَرو انجمن گشت بازارگاه<br />
+            <br />
+            همی بر خروشید و فریاد خواند<br />
+            جهان را سراسر سوی داد خواند<br />
+            <br />
+            از آن چرم کآهنگران پشت پای<br />
+            بپوشند هنگام زخم درای<br />
+            <br />
+            همان کاوه آن بر سر نیزه کرد<br />
+            همان‌گه ز بازار برخاست گَرد<br />
+            <br />
+            خروشان همی رفت نیزه به دست<br />
+            که ای نامداران یزدان‌پرست!<br />
+            <br />
+            کسی کاو هوای فریدون کند<br />
+            دل از بند ضحاک بیرون کند<br />
+            <br />
+            بپویید کاین مهتر آهرمن است<br />
+            جهان آفرین را به دل دشمن است<br />
+            <br />
+            بدان بی‌بها ناسزاوار پوست<br />
+            پدید آمد آوای دشمن ز دوست<br />
+            <br />
+            همی رفت پیش اندرون مرد گرد<br />
+            جهانی بَرو انجمن شد نه خُرد<br />
+            <br />
+            بدانست خود کافریدون کجاست<br />
+            سر اندر کشید و همی رفت راست<br />
+            <br />
+            بیامد به درگاه سالار نو<br />
+            بدیدندش آن جا و برخاست غو<br />
+            <br />
+            چو آن پوست بر نیزه بر دید کِی<br />
+            به نیکی یکی اختر افگند پی<br />
+            <br />
+            بیاراست آن را به دیبای روم<br />
+            ز گوهر بر و پیکر از زر بوم<br />
+            <br />
+            بزد بر سر خویش چون گرد ماه<br />
+            یکی فال فرخ پی‌افکند شاه<br />
+            <br />
+            فرو هشت ازو سرخ و زرد و بنفش<br />
+            همی خواندش کاویانی درفش<br />
+            <br />
+            از آن پس هر آن کس که بگرفت گاه<br />
+            به شاهی به سر بر نهادی کلاه<br />
+            <br />
+            بر آن بی‌بها چرم آهنگران<br />
+            برآویختی نو به نو گوهران<br />
+            <br />
+            ز دیبای پرمایه و پرنیان<br />
+            بر آن گونه شد اختر کاویان<br />
+            <br />
+            که اندر شب تیره خورشید بود<br />
+            جهان را ازو دل پر امید بود<br />
+            <br />
+            بگشت اندرین نیز چندی جهان<br />
+            همی بودنی داشت اندر نهان<br />
+            <br />
+            فریدون چو گیتی بر آن گونه دید<br />
+            جهان پیش ضحاک وارونه دید<br />
+            <br />
+            سوی مادر آمد کمر بر میان<br />
+            به سر بر نهاده کلاه کیان<br />
+            <br />
+            که من رفتنی‌ام سوی کارزار<br />
+            تو را جز نیایش مباد ایچ کار<br />
+            <br />
+            ز گیتی جهان‌آفرین را پرست<br />
+            ازو دان بهر نیکی زور دست<br />
+            <br />
+            فرو ریخت آب از مژه مادرش<br />
+            همی خواند با خون دل داورش<br />
+            <br />
+            به یزدان همی گفت زنهار من<br />
+            سپردم تو را ای جهاندار من<br />
+            <br />
+            بگردان ز جانش بد جاودان<br />
+            بپرداز گیتی ز نابخردان<br />
+            <br />
+            فریدون سبک ساز رفتن گرفت<br />
+            سخن را ز هر کس نهفتن گرفت<br />
+            <br />
+            برادر دو بودش دو فرخ همال<br />
+            ازو هر دو آزاده مهتر به سال<br />
+            <br />
+            یکی بود ازیشان کیانوش نام<br />
+            دگر نام پرمایهٔ شادکام<br />
+            <br />
+            فریدون بریشان زبان برگشاد<br />
+            که خرم زیید ای دلیران و شاد<br />
+            <br />
+            که گردون نگردد به جز بر بهی<br />
+            به ما بازگردد کلاه مهی<br />
+            <br />
+            بیارید داننده آهنگران<br />
+            یکی گرز فرمود باید گران<br />
+            <br />
+            چو بگشاد لب هر دو بشتافتند<br />
+            به بازار آهنگران تاختند<br />
+            <br />
+            هر آن کس کز آن پیشه بُد نام‌جوی<br />
+            به سوی فریدون نهادند روی<br />
+            <br />
+            جهان‌جوی پرگار بگرفت زود<br />
+            وزان گرز پیکر بٕدیشان نمود<br />
+            <br />
+            نگاری نگارید بر خاک پیش<br />
+            همیدون به سان سر گاومیش<br />
+            <br />
+            بر آن دست بردند آهنگران<br />
+            چو شد ساخته کار گرز گران<br />
+            <br />
+            به پیش جهان‌جوی بردند گرز<br />
+            فروزان به کردار خورشید بُرز<br />
+            <br />
+            پسند آمدش کار پولادگر<br />
+            ببخشیدشان جامه و سیم و زر<br />
+            <br />
+            بسی کردشان نیز فرخ امید<br />
+            بسی دادشان مهتری را نوید<br />
+            <br />
+            که گر اژدها را کنم زیر خاک<br />
+            بشویم شما را سر از گرد پاک<br />
+
+
+        </p>
+
+        <!-- <p>
+            سخن گفتن اندر ستایش خرد<br />
+            که هر نیکوی را ز خرد بایدت
+        </p>
+
+        <p>
+            کنون ای خردمند و دانش‌پژوه<br />
+            بیندیش و این داستان را نگه
+        </p>
+
+        <p>
+            ... (ادامه متن شاهنامه اینجا قرار می‌گیرد) ...
+        </p> -->
+
+        <!-- ===== دو دکمه بازگشت ===== -->
+        <div class="back-links">
+            <a href="../" class="back-link">← بازگشت به صفحه اصلی کتابخانه</a>
+            <a href="./" class="back-link">← بازگشت به صفحه قبل</a>
+        </div>
+
+        <div class="footer">📖 کتابخانه جنوب - تمامی حقوق محفوظ است</div>
+    </div>
+
+    <script>
+        const body = document.body;
+        const btn = document.getElementById('themeToggle');
+        const THEME_KEY = 'globalTheme';
+
+        if (localStorage.getItem(THEME_KEY) === 'dark') {
+            body.classList.add('dark-mode');
+            btn.textContent = '☀️ حالت روز';
+        }
+
+        btn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                btn.textContent = '☀️ حالت روز';
+                localStorage.setItem(THEME_KEY, 'dark');
+            } else {
+                btn.textContent = '🌙 حالت شب';
+                localStorage.setItem(THEME_KEY, 'light');
+            }
+        });
+    </script>
+</body>
+</html>
